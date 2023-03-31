@@ -18,7 +18,11 @@ function App() {
       </main>
       <Footer/>
 
-        <ToastContainer/>
+        <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        theme={"colored"}
+        />
     </div>
   )
 }

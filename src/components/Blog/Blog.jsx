@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsBookmarkFill } from 'react-icons/bs';
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleBookmark }) => {
 
     const { id, name, blogTitle, posted, readTime, authorImage, blogImage, tags } = blog;
 
@@ -24,7 +24,7 @@ const Blog = ({ blog }) => {
                     </div>
                     <div className='flex items-center gap-1 font-semibold'>
                         <p> {readTime} mins read  </p>
-                        <BsBookmarkFill/>
+                        <button onClick={()=>handleBookmark(id)} ><BsBookmarkFill/></button>
                     </div>
                 </div>
                 {/* bottom bottom section */}
