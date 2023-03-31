@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsBookmarkFill } from 'react-icons/bs';
 
-const Blog = ({ blog, handleBookmark }) => {
+const Blog = ({ blog, handleBookmark, spentTime }) => {
 
     const { id, name, blogTitle, posted, readTime, authorImage, blogImage, tags } = blog;
 
@@ -34,7 +34,7 @@ const Blog = ({ blog, handleBookmark }) => {
                         {tags.map((t,i)=> <span className='bg-gray-300 px-1' key={i} >{t}</span> )}
                     </div>
 
-                    <button className='btn btn-outline'>Mark as Read</button>
+                    <button onClick={()=>spentTime(readTime)} className='btn btn-outline'>Mark as Read</button>
                 </div>
             </div>
         </div>
