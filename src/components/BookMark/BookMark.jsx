@@ -5,7 +5,7 @@ const BookMark = ({bookmark, spent}) => {
     return (
         <div className='sticky top-0 pt-6'>
             <div className='bg-slate-200 p-4 rounded-md text-center border border-violet-800'>
-            <h1 className='font-semibold text-violet-800'>Spent time on read: {spent} min</h1>
+            <h1 className='font-semibold text-violet-800'>Spent time on read: {spent.reduce((a,c)=>a+c,0)} min</h1>
             </div>
 
             <section className='mt-3 bg-slate-200 p-3 rounded-md'>

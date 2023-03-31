@@ -7,7 +7,7 @@ const Blogs = () => {
 
     const [blogData, setBlogData] = useState([]);
     const [bookmark, setBookmark] = useState([]);
-    const [spent, setSpent] = useState(0);
+    const [spent, setSpent] = useState([]);
 
 
     useEffect(()=>{
@@ -32,10 +32,16 @@ const Blogs = () => {
     }
     
     const spentTime = time =>{
-        setSpent(spent+time)
+        let add = [];
+        add = [...spent,time];
+        const checkTime = spent.find(t=>t===time);
+        if(!checkTime)
+        setSpent(add);
+        else
+        toast.info('This blog you you already read!')
     }
 
-    console.log(spent)
+    // console.log(spent)
 
     return (
         <div className='grid md:grid-cols-4 grid-cols-1 md:px-32 mt-12'>
