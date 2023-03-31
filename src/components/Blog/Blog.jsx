@@ -19,7 +19,7 @@ const Blog = ({ blog }) => {
                         <img className='w-12 h-12 rounded-[50%]' src={authorImage} alt="" />
                         <div>
                             <h4 className='text-lg font-semibold'> {name}</h4>
-                            <p className='text-slate-500'>({posted})</p>
+                            <p className='text-slate-500 text-sm font-medium'>{posted}</p>
                         </div>
                     </div>
                     <div className='flex items-center gap-1 font-semibold'>
@@ -31,7 +31,7 @@ const Blog = ({ blog }) => {
                 <div className='mt-5 space-y-3'>
                     <h1 className='md:text-2xl text-xl font-bold'> {blogTitle} </h1>
                     <div className='space-x-2 font-medium'>
-                        {tags.map((t,i)=> <span key={i} >{t}</span> )}
+                        {tags.map((t,i)=> <span className='bg-gray-300 px-1' key={i} >{t}</span> )}
                     </div>
 
                     <button className='btn btn-outline'>Mark as Read</button>
