@@ -5,6 +5,7 @@ import './App.css'
 import Blogs from './components/Blogs/Blogs';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import Questions from './components/Questions/Questions';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Header/>
       <main className='min-h-[39rem]'>
         <Blogs/>
+        <Questions/>
       </main>
       <Footer/>
 
