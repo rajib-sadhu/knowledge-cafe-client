@@ -34,7 +34,7 @@ const Blog = ({ blog, handleBookmark, spentTime }) => {
                         {tags.map((t,i)=> <span className='text-slate-400' key={i} >{t}</span> )}
                     </div>
 
-                    <button id='mark-read' onClick={()=>{spentTime(readTime)}} className='btn btn-outline'>Mark as Read</button>
+                    <button id='mark-read' onClick={()=>{spentTime(readTime)}} className='underline text-blue-800 text-sm'>Mark as read</button>
                 </div>
             </div>
         </div>
